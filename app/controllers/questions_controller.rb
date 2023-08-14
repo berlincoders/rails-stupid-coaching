@@ -5,14 +5,12 @@ class QuestionsController < ApplicationController
     end
 
     def answer
-         @answer = params[:query]
+        @answer = params[:query]
 
-         @coach = if @answer.end_with?("?")
-               "Silly question, get dressed and go to work!."  
-        
+        @coach = if @answer.end_with?("?")
+            "Silly question, get dressed and go to work!."  
         elsif @answer = "I am going to work"
-         "Great!"   
-    
+        "Great!"   
         else
         "I don't care, get dressed and go to work!" 
         end
